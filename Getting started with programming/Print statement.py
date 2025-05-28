@@ -1,0 +1,6 @@
+print("Hello! welcome to proggraming")
+print(123)
+print(True)
+print('\nI a\t have new empty line \n')
+print('My age is:',25,'years old')
+print('This is end statement', end='%')
