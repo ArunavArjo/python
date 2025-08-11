@@ -2,7 +2,7 @@ height = float(input("Enter your height in meters:"))
 weight = float(input("Enter your weight in kilograms:"))
 
 BMI = weight/(height**2)
-print(f"Your BMI is{BMI:.2f}")
+print("Your BMI is{BMI:.2f}")
 
 if BMI < 18.5:
     print("You are underweight")
