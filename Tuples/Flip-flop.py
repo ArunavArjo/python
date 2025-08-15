@@ -7,7 +7,7 @@ def flip_flop(tuple):
             f +=1
             l-+1
             return True
-yu = (1,2,3,4,3,2,1,9)
+yu = (1,2,3,4,3,2,1)
 if(flip_flop(yu)):
     print("The tuple is Flip_flop")
 else:
