@@ -1,4 +1,8 @@
+import pygame
+import random
 
+pygame.init()
+BLUE = ('blue')
 
         if self.rect.left <=0 or self.rect.left >= 400:
             self.velocity[1] = -self.velocity[1]

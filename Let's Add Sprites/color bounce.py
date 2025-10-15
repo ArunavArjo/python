@@ -1,6 +1,6 @@
 import pygame
 import random
-# Initialize Pygame
+
 pygame.init()
 
 BLUE = pygame.Color('blue')
@@ -11,7 +11,6 @@ MAGENTA = pygame.Color('magenta')
 ORANGE = pygame.Color('orange')
 WHITE = pygame.Color('white')
 
-# Sprite class
 class Sprite(pygame.sprite.Sprite):
     def __init__(self, color, width, height):
         super().__init__()
@@ -40,7 +39,7 @@ def change_background_color():
     global bg_color
     bg_color = random.choice([BLUE, LIGHTBLUE, DARKBLUE])
 
-# Create sprite group
+
 all_sprites = pygame.sprite.Group()
 sp1 = Sprite(WHITE, 30, 20)
 sp1.rect.x = random.randint(0, 470)
@@ -48,27 +47,31 @@ sp1.rect.y = random.randint(0, 380)
 sp2 = Sprite(WHITE, 30, 20)
 sp2.rect.x = random.randint(0, 470)
 sp2.rect.y = random.randint(0, 380)
-all_sprites.add(sp1, sp2)
 
-# Screen setup
+sp3 = Sprite(WHITE, 30, 20)
+sp3.rect.x = random.randint(0, 470)
+sp3.rect.y = random.randint(0, 380)
+all_sprites.add(sp1, sp2,sp3)
+
+
 screen = pygame.display.set_mode((500, 400))
 pygame.display.set_caption("Bouncing Sprite")
 bg_color = BLUE
 clock = pygame.time.Clock()
 
-# Game loop
+
 running = True
 while running:
     for event in pygame.event.get():
-        if event.type == pygame.QUIT:  # Quit on X button
+        if event.type == pygame.QUIT:  
             running = False
 
-    # Update
+    
     all_sprites.update()
     screen.fill(bg_color)
     all_sprites.draw(screen)
 
     pygame.display.flip()
-    clock.tick(120)  # frame rate
+    clock.tick(120)  
 
 pygame.quit()
