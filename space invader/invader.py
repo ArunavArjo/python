@@ -25,7 +25,7 @@ screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
 
 # Background
-background = pygame.image.load('background.jpg')
+background = pygame.image.load('background.png')
 
 
 # Caption and Icon
@@ -59,7 +59,7 @@ for _i in range(num_of_enemies):
 
 
 # Bullet
-bulletImg = pygame.image.load('bullet1.png')
+bulletImg = pygame.image.load('bullet.png')
 bulletX = 0
 bulletY = PLAYER_START_Y
 bulletX_change = 0
