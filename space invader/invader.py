@@ -25,7 +25,7 @@ screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
 
 # Background
-background = pygame.image.load('background.jpg')
+background = pygame.image.load('background.png')
 
 
 # Caption and Icon
